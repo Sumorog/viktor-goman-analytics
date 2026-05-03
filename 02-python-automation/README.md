@@ -6,7 +6,8 @@
 
 | Файл | Роль |
 |------|------|
-| [auto_calc.py](auto_calc.py) | Основной скрипт |
+| [auto_calc.py](auto_calc.py) | Основной скрипт расчёта |
+| [validate_input.py](validate_input.py) | Проверка колонок и дубликатов до прогона |
 | [input_example.xlsx](input_example.xlsx) | **Готовый пример** для запуска «из коробки» (лист `Data`) |
 | [input_data.xlsx](input_data.xlsx) | Альтернативный короткий пример |
 | [RUNBOOK.md](RUNBOOK.md) | Как прогонять у себя и что проверить вручную |

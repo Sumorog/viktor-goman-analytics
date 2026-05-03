@@ -1,5 +1,6 @@
 # Runbook: расчёт из Excel
 
+0. Опционально: `python validate_input.py --input input_example.xlsx` — быстрая проверка схемы.
 1. Убедиться, что лист называется **`Data`**.
 2. Обязательные колонки: `contract_id`, `service_code`, `quantity`, `area`, `date`.
 3. Опционально: **`hours`** — для услуги `congress_rent` (аренда по часам); если пусто, берётся `quantity`. В `input_example.xlsx` колонка уже заполнена для демо-строки конгресс-центра.

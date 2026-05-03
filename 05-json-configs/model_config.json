@@ -1,0 +1,22 @@
+{
+  "service_name": "portfolio-demo-assistant",
+  "model": {
+    "provider": "openai-compatible",
+    "model_id": "gpt-4.1-mini",
+    "temperature": 0.2,
+    "max_output_tokens": 1024,
+    "top_p": 0.95
+  },
+  "routing": {
+    "default_locale": "ru-RU",
+    "fallback_model_id": "gpt-4.1-nano"
+  },
+  "safety": {
+    "block_pii_patterns": true,
+    "max_requests_per_minute": 60
+  },
+  "features": {
+    "streaming": true,
+    "json_mode": false
+  }
+}

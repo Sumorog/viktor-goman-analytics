@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "locale": "ru-RU",
+  "intents": [
+    {
+      "name": "book_appointment",
+      "description": "Пользователь хочет записаться на приём",
+      "required_slots": ["service_type", "preferred_date", "contact_phone"],
+      "utterance_hints": ["записаться", "приём", "врач", "свободное время"]
+    },
+    {
+      "name": "faq_hours",
+      "description": "Вопрос о режиме работы",
+      "required_slots": [],
+      "response_template_id": "tpl_working_hours"
+    }
+  ],
+  "flows": [
+    {
+      "id": "main",
+      "start_intent": "book_appointment",
+      "steps": [
+        { "ask": "service_type", "prompt": "Какой тип приёма вас интересует?" },
+        { "ask": "preferred_date", "prompt": "Укажите желаемую дату или диапазон." },
+        { "ask": "contact_phone", "prompt": "Оставьте телефон для подтверждения." },
+        { "action": "submit_to_crm", "on_success": "confirm_booking", "on_error": "handoff_human" }
+      ]
+    }
+  ],
+  "fallback": {
+    "low_confidence": "Я не уверен, что понял. Перефразируйте, пожалуйста, или наберите оператора: 8800...",
+    "handoff_human": "Переключаю на специалиста. Ожидайте, среднее время ответа — 2 минуты."
+  }
+}

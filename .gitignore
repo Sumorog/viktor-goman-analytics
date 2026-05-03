@@ -1,0 +1,14 @@
+# Локальное ТЗ не публикуем в репозиторий
+Основное ТЗ.txt
+
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+.env
+*.log
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/

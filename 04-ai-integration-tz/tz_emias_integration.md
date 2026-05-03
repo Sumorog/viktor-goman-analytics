@@ -72,7 +72,7 @@
 | 400 | `VALIDATION_ERROR` | Исправить JSON по схеме, повторить запрос |
 | 401 | `UNAUTHORIZED` | Обновить OAuth2-токен, проверить clock skew |
 | 409 | `DUPLICATE_MEASUREMENT` | Идемпотентность: тот же `device_id`+`timestamp` уже принят |
-| 422 | `PATIENT_NOT_LINKED` | Пациент не сопоставлён с ЕМИАС — эскалация в МИС |
+| 422 | `PATIENT_NOT_LINKED` | Пациент не сопоставлен с ЕМИАС — эскалация в МИС |
 | 503 | `EMIAS_UNAVAILABLE` | Экспоненциальный backoff, не чаще 1 запроса / 30 сек |
 
 ---

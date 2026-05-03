@@ -1,0 +1,57 @@
+[
+  {
+    "district": "ЦАО",
+    "requests": 1240,
+    "satisfaction": 4.1
+  },
+  {
+    "district": "САО",
+    "requests": 980,
+    "satisfaction": 4.0
+  },
+  {
+    "district": "СВАО",
+    "requests": 1120,
+    "satisfaction": 3.9
+  },
+  {
+    "district": "ВАО",
+    "requests": 860,
+    "satisfaction": 3.8
+  },
+  {
+    "district": "ЮВАО",
+    "requests": 910,
+    "satisfaction": 3.9
+  },
+  {
+    "district": "ЮАО",
+    "requests": 1050,
+    "satisfaction": 4.0
+  },
+  {
+    "district": "ЮЗАО",
+    "requests": 1180,
+    "satisfaction": 4.1
+  },
+  {
+    "district": "ЗАО",
+    "requests": 790,
+    "satisfaction": 4.0
+  },
+  {
+    "district": "СЗАО",
+    "requests": 1020,
+    "satisfaction": 3.9
+  },
+  {
+    "district": "ЗелАО",
+    "requests": 340,
+    "satisfaction": 4.2
+  },
+  {
+    "district": "ТиНАО",
+    "requests": 720,
+    "satisfaction": 3.7
+  }
+]

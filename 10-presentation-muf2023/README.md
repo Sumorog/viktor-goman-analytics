@@ -2,7 +2,9 @@
 
 | Файл | Назначение |
 |------|------------|
-| `slides.pdf` | Заглушка PDF под будущую замену |
-| [talking_points.md](talking_points.md) | Тезисы выступления (связь со слайдами) |
+| `slides.pdf` | **3 слайда** (учебный макет в духе MUF: тёмный фон, тезисы без чувствительных цифр) — см. `../scripts/render_portfolio_assets.py` |
+| [talking_points.md](talking_points.md) | Тезисы выступления |
 
-Тематически пересекается с кейсом ИИ в [04-ai-integration-tz](../04-ai-integration-tz/).
+Пересборка PDF: из корня репозитория выполнить `python scripts/render_portfolio_assets.py`.
+
+Тематическая связь: [04-ai-integration-tz](../04-ai-integration-tz/).

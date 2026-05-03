@@ -1,0 +1,10 @@
+# Примеры (обезличено) — как пользователь попадает в ветку bot_logic.json
+
+scenarios:
+  - user: "Хочу записаться к кардиологу на следующей неделе"
+    intent: book_appointment
+    slots_to_fill: [service_type, preferred_date, contact_phone]
+
+  - user: "До скольки вы работаете в субботу?"
+    intent: faq_hours
+    response_template_id: tpl_working_hours

@@ -1,0 +1,4 @@
+# Параметры прогноза (демо)
+window_months: 3
+series_name: "revenue_mln_rub"
+notes: "Для продакшена подключать внешний CSV/БД; здесь ряд зашит в forecast.py"

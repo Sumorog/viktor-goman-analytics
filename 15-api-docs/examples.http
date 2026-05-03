@@ -1,0 +1,13 @@
+### Превью начислений (пример из api_description.md)
+POST https://api.example-billing.ru/v1/accruals/preview
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "contract_id": "C-10001",
+  "period": "2024-05",
+  "services": [
+    {"code": "HEAT", "qty": 120.5},
+    {"code": "RENT", "area_sqm": 85.0}
+  ]
+}

@@ -12,3 +12,4 @@ venv/
 .DS_Store
 Thumbs.db
 .ipynb_checkpoints/
+_test_out.xlsx

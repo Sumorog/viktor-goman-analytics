@@ -1,37 +1,53 @@
-# Портфолио аналитика
+# Аналитика: от тарифов до ИИ
 
-**Виктор Гоман** — финансовый аналитик с опытом цифровизации процессов и данных.
+**Виктор Гоман** — 7 лет в финансах и цифровизации.
 
-- Опыт: тарифная политика, автоматизация расчётов, BI, интеграции с 1С и медицинскими системами
-- Стек: SQL, Python, Power BI, Excel, документация требований и ТЗ
-- Формат репозитория: 20 тематических папок с примерами работ (код, запросы, конфиги, тексты обезличены там, где это уместно)
+- Управлял выручкой **5,5 млрд руб.**, автоматизировал **15+** процессов
+- Внедрял ИИ в здравоохранение Москвы: от MVP до масштабирования в регионы РФ и СНГ
+- Стек: **SQL**, **Python**, **Power BI**, **1С**
 
-## Структура
+## Быстрый старт
 
-| Папка | Описание |
-|-------|----------|
-| [01-sql-tariffs](01-sql-tariffs/) | SQL: расчёт тарифов, JOIN, оконные функции |
-| [02-python-automation](02-python-automation/) | Python: автоматизация расчётов по выгрузкам из 1С |
-| [03-powerbi-dashboard](03-powerbi-dashboard/) | Power BI: дашборд, скриншот и схема модели |
-| [04-ai-integration-tz](04-ai-integration-tz/) | ТЗ на интеграцию ИИ/носимых устройств с ЕМИАС |
-| [05-json-configs](05-json-configs/) | Пример JSON-конфига для ИИ-модели |
-| [06-debt-analysis](06-debt-analysis/) | Jupyter: анализ и прогноз дебиторки |
-| [07-grant-proposal](07-grant-proposal/) | Фрагмент грантовой заявки (прогноз закупок) |
-| [08-crm-requirements](08-crm-requirements/) | Требования к CRM |
-| [09-unit-economics](09-unit-economics/) | Unit-экономика в Excel |
-| [10-presentation-muf2023](10-presentation-muf2023/) | Материалы выступления (обезличенный PDF-заглушка) |
-| [11-1c-integration](11-1c-integration/) | Формат обмена с 1С |
-| [12-data-cleaning](12-data-cleaning/) | Очистка и валидация данных на Python |
-| [13-ab-test-analysis](13-ab-test-analysis/) | A/B-тест: ноутбук |
-| [14-forecasting](14-forecasting/) | Прогнозирование на Python |
-| [15-api-docs](15-api-docs/) | Описание API |
-| [16-risk-matrix](16-risk-matrix/) | Матрица рисков (Excel) |
-| [17-kpi-dashboard](17-kpi-dashboard/) | Трекер KPI (Excel) |
-| [18-process-map](18-process-map/) | Карта процесса (markdown) |
-| [19-chatbot-logic](19-chatbot-logic/) | Логика сценариев чат-бота (JSON) |
-| [20-sql-interview](20-sql-interview/) | Типовые SQL-задачи с собеседований |
+| Роль | Смотреть сюда |
+|------|---------------|
+| Финансовый аналитик | [01-sql-tariffs](01-sql-tariffs/) — расчёт тарифов; [09-unit-economics](09-unit-economics/) — unit-экономика |
+| Менеджер ИИ-проектов | [04-ai-integration-tz](04-ai-integration-tz/) — ТЗ на интеграцию с ЕМИАС; [05-json-configs](05-json-configs/) — конфиги моделей |
+| Бизнес-аналитик IT | [02-python-automation](02-python-automation/) — автоматизация расчётов; [15-api-docs](15-api-docs/) — описание API |
+
+## Примеры кода
+
+### SQL: расчёт тарифов ОЭЗ
+
+См. [01-sql-tariffs/tariff_calculation.sql](01-sql-tariffs/tariff_calculation.sql) и соседние запросы в той же папке: оконные функции, **JOIN** нескольких сущностей биллинга, агрегация по **15+** видам услуг.
+
+### Python: автоматизация расчётов
+
+См. [02-python-automation/auto_calc.py](02-python-automation/auto_calc.py) — `pandas`, `openpyxl`, цепочка **1С → Excel → проверка → результат** (обезличенные поля).
+
+```bash
+pip install pandas openpyxl numpy
+python auto_calc.py --input input_example.xlsx
+```
+
+### ТЗ: интеграция ИИ-браслетов с ЕМИАС
+
+См. [04-ai-integration-tz/tz_emias_integration.md](04-ai-integration-tz/tz_emias_integration.md) — REST API, JSON-форматы, сценарии ошибок, критерии приёмки; в папке — дополнительные материалы согласования с клиниками.
+
+## Структура репозитория (20 блоков)
+
+| Папка | Содержание |
+|-------|------------|
+| [01-sql-tariffs](01-sql-tariffs/) | Рабочие SQL-образцы тарифного контура ОЭЗ |
+| [02-python-automation](02-python-automation/) | Скрипты расчётов и примеры входных Excel |
+| [03-powerbi-dashboard](03-powerbi-dashboard/) | Материалы дашборда и модель данных |
+| [04-ai-integration-tz](04-ai-integration-tz/) | ТЗ ЕМИАС и приложения |
+| [05-json-configs](05-json-configs/) | Конфиги ИИ-сервисов, версии после ревью |
+| [06-debt-analysis](06-debt-analysis/) | Jupyter: дебиторка, эффект автоматизации |
+| [07-grant-proposal](07-grant-proposal/) — [20-sql-interview](20-sql-interview/) | Остальные кейсы портфолио |
 
 ## Контакты
 
-- Email: viktor.goman@list.ru  
-- Telegram: @viktor_goman  
+- **HeadHunter:** актуальное резюме — по запросу (ссылку обновляю в профиле HH).  
+- **Email:** viktor.goman@list.ru  
+- **Телефон:** +7 (985) 999-95-62  
+- **Telegram:** @viktor_goman  

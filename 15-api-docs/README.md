@@ -1,7 +1,8 @@
 # 15 — Документация API
 
-Краткое описание REST API для внешней интеграции: ресурсы, коды ответов, примеры JSON.
+| Файл | Назначение |
+|------|------------|
+| [api_description.md](api_description.md) | Текстовое описание |
+| [examples.http](examples.http) | Примеры вызовов для VS Code REST Client |
 
-## Файлы
-
-- `api_description.md` — текст для разработчиков интеграторов.
+Связь с ТЗ ЕМИАС: см. раздел REST/JSON в [04-ai-integration-tz](../04-ai-integration-tz/tz_emias_integration.md).

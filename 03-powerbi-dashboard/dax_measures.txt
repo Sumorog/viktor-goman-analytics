@@ -1,0 +1,22 @@
+-- DAX-черновики (синтаксис Power BI), связаны с полями из SQL-витрин 01-sql-tariffs
+
+-- Выручка (факт)
+Revenue YTD :=
+CALCULATE (
+    SUM ( 'FactAccrual'[Amount] ),
+    DATESYTD ( 'Calendar'[Date] )
+)
+
+-- Доля услуги в выручке месяца
+Share of Service :=
+DIVIDE (
+    SUM ( 'FactAccrual'[Amount] ),
+    CALCULATE ( SUM ( 'FactAccrual'[Amount] ), ALL ( 'Service'[ServiceCode] ) )
+)
+
+-- Средний чек на резидента (активные договоры)
+Avg Revenue per Active Resident :=
+DIVIDE (
+    [Revenue YTD],
+    DISTINCTCOUNT ( 'Contract'[ResidentId] )
+)

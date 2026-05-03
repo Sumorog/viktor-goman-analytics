@@ -1,9 +1,13 @@
 {
-  "_note": "Алиас актуальной версии — см. model_config.v2.1.json и REVIEW_CHANGELOG.md",
   "_schema": "ai-router-config",
   "_version": "2.1",
+  "_comment": "Рабочий шаблон после ревью (20+ замечаний). Поля _comment не читает прод-код — только для людей и портфолио.",
+
   "service_name": "emias-bracelet-assistant",
+  "_comment_service_name": "Имя сервиса в логах и метриках; совпадает с префиксом trace.",
+
   "model": {
+    "_comment": "Основная модель для классификации намерений и генерации ответа оператору.",
     "provider": "openai-compatible",
     "model_id": "gpt-4.1",
     "temperature": 0.15,
@@ -12,23 +16,30 @@
     "top_p": 0.9,
     "request_timeout_sec": 45
   },
+
   "routing": {
+    "_comment": "Маршрутизация: локаль, резервная модель, запрет смены региона данных.",
     "default_locale": "ru-RU",
     "timezone": "Europe/Moscow",
     "fallback_chain": ["gpt-4.1-mini", "gpt-4.1-nano"],
     "data_residency": "RU-only"
   },
+
   "safety": {
+    "_comment": "ИБ: маскирование ПДн, лимиты, запрет json_mode в сценариях с ФИО.",
     "block_pii_patterns": true,
     "mask_phone_in_logs": true,
     "max_requests_per_minute": 120,
     "max_user_messages_per_session": 40,
     "forbid_json_mode_when_pii_detected": true
   },
+
   "observability": {
+    "_comment": "Корреляция с внешними системами (например шина ЕМИАС).",
     "propagate_header": "X-Correlation-Id",
     "log_sampling_rate": 0.25
   },
+
   "features": {
     "streaming": true,
     "json_mode": false,
